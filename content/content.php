@@ -57,6 +57,7 @@ if(isset($_POST["hapus"])){
                     <th class="text-black text-center">Pengarang</th>
                     <th class="text-black text-center">Stok</th>
                     <th class="text-black text-center">Tahun Terbit</th>
+                    <th class="text-black text-center">Cover</th>
                     <th class="text-black text-center">Aksi</th>
                 </tr>
 
@@ -75,9 +76,13 @@ if(isset($_POST["hapus"])){
                     <th class="text-capitalize text-sm font-weight-normal text-wrap"><?= $data['pengarang']?></th>
                     <th class="text-center text-sm font-weight-normal text-wrap"><?= $data['stok']?></th>
                     <th class="text-center text-sm font-weight-normal text-wrap"><?= $data['thn_terbit']?></th>
+                    <th class="text-center text-sm font-weight-normal text-wrap">
+                        <img src="upload/<?= $data['cover']?>" alt="img" width="50px">
+                    </th>
                     <th class="text-center">
                         <a href="#" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#modalUbah<?= $no?>">Ubah</a>
                         <a href="#" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalHapus<?= $no?>">Hapus</a>
+                        <a href="?page=upload&id=<?= $data['id_buku']?>" class="btn btn-success btn-sm" >Upload</a>
                     </th>
                 </tr>
 

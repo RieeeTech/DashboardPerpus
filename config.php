@@ -21,6 +21,11 @@ switch ( $page ){
     $page = "include('content/statusPinjam/pinjam_StatusPending.php');";
     break;
 
+  case 'upload':
+    $pageJudul = "Upload Cover";
+    $page = "include('content/upload.php');";
+    break;
+
   case 'pinjam_approved':
     $pageJudul = "Status Peminjaman : Approved";
     $page = "include('content/statusPinjam/pinjam_StatusApproved.php');";
